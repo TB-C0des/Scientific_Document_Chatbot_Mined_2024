@@ -24,7 +24,7 @@ We have implemented a document type detector for detecting the extension of docu
 After document type is known, we will be calling specific parser for that document.
 ## 4. Chunking
 After parsing , we are creating chunks of the documents using Langchain .split_text() function.
-## 5. Creating Embeddings and stroing it to vector stores
+## 5. Creating Embeddings and storing it to vector stores
 Chunks will be passed to HuggingFaceEmbeddings and then will be stored into vector stores
 ```
 db = FAISS.from_texts(chunked_documents, HuggingFaceEmbeddings(model_name='sentence-transformers/all-mpnet-base-v2'))
