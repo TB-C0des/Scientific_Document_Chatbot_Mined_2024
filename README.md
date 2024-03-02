@@ -1,5 +1,5 @@
 # Scientific_Document_Chatbot_Mined_2024
-#Dependencies
+# Dependencies
 The first cell of the final.ipynb will setup and install all dependencies required for the project.
 Commands are
 ```
@@ -14,7 +14,7 @@ Commands are
 !pip install python-pptx
 !pip install gradio
 ```
-#A brief on further flow of the project
+# A brief on further flow of the project
 ## 1. Uploading File
 File can uploaded on 3 types .i.e our project supports 3 document types .pptx, .pdf, .docx.
 We have provided user friendly interface using Gradio for uploading files.
