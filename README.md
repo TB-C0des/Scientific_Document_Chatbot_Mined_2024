@@ -34,3 +34,5 @@ retriever = db.as_retriever()
 Emebddings generated using HuggingFaceEmbeddings will be passed to RAG chain which is calling Mistral 7B Large language model's API.
 ## 7. Query answering/ Chat with Files
 An user interface is created by us using Gradio for asking queries which will give answers based on the research document.
+##Demo Video link
+https://drive.google.com/drive/folders/1IL8-HZMIkE31kj0MQwjccHHEDCDVAxxL?usp=drive_link
