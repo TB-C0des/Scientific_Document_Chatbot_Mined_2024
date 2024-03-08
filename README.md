@@ -1,6 +1,7 @@
 # Scientific_Document_Chatbot_Mined_2024
+A interactive Web UI  to 'chat' with your documents. Powered by Mistral 7B LLM through RAG Chain
 # Dependencies
-The first cell of the final.ipynb will setup and install all dependencies required for the project.
+The first cell of the final.ipynb will setup and install all dependencies required for the project.<br>
 Commands are
 ```
 !pip install -q -U torch datasets transformers tensorflow langchain playwright html2text sentence_transformers faiss-cpu
@@ -14,16 +15,16 @@ Commands are
 !pip install python-pptx
 !pip install gradio
 ```
-# A brief on further flow of the project
+# Flow of the project
 ## 1. Uploading File
-File can uploaded on 3 types .i.e our project supports 3 document types .pptx, .pdf, .docx.
+File can uploaded in 3 types : ***.pptx , .pdf & .docx.***
 We have provided user friendly interface using Gradio for uploading files.
 ## 2. Document-type detector
 We have implemented a document type detector for detecting the extension of document.
 ## 3. Parsing
-After document type is known, we will be calling specific parser for that document.
+After document type is known, we are calling specific parser for that document.
 ## 4. Chunking
-After parsing , we are creating chunks of the documents using Langchain .split_text() function.
+After parsing , we are creating chunks of the documents using ***Langchain .split_text()*** function.
 ## 5. Creating Embeddings and storing it to vector stores
 Chunks will be passed to HuggingFaceEmbeddings and then will be stored into vector stores
 ```
@@ -31,8 +32,7 @@ db = FAISS.from_texts(chunked_documents, HuggingFaceEmbeddings(model_name='sente
 retriever = db.as_retriever()
 ```
 ## 6. Creating RAG chain
-Emebddings generated using HuggingFaceEmbeddings will be passed to RAG chain which is calling Mistral 7B Large language model's API.
+Emebddings generated using HuggingFaceEmbeddings will be passed to RAG chain which is calling **Mistral 7B Large language model's API.**
 ## 7. Query answering/ Chat with Files
-An user interface is created by us using Gradio for asking queries which will give answers based on the research document.
-##Demo Video link
-https://drive.google.com/drive/folders/1IL8-HZMIkE31kj0MQwjccHHEDCDVAxxL?usp=drive_link
+An user interface is created by us using Gradio for asking queries which will give answers based on the research document. <br>
+## [Demo Video](https://drive.google.com/drive/folders/1IL8-HZMIkE31kj0MQwjccHHEDCDVAxxL?usp=drive_link)
